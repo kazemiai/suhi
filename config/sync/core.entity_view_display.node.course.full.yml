@@ -1,8 +1,9 @@
-uuid: a9354431-5163-4ba9-b945-819649b6e612
+uuid: abf66f75-2e53-4daa-b21c-8cf8d28917db
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.course.body
     - field.field.node.course.field_a_g
     - field.field.node.course.field_course_number
@@ -15,13 +16,13 @@ dependencies:
     - link
     - text
     - user
-id: node.course.default
+id: node.course.full
 targetEntityType: node
 bundle: course
-mode: default
+mode: full
 content:
   body:
-    label: inline
+    label: hidden
     type: text_default
     weight: 101
     settings: {  }
@@ -29,7 +30,7 @@ content:
     region: content
   field_a_g:
     weight: 104
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -46,7 +47,7 @@ content:
     region: content
   field_grade_level:
     weight: 105
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -54,7 +55,7 @@ content:
     region: content
   field_graduation_requirement:
     weight: 108
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -62,7 +63,7 @@ content:
     region: content
   field_other_attributes:
     weight: 106
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -70,7 +71,7 @@ content:
     region: content
   field_video_link:
     weight: 103
-    label: inline
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -82,7 +83,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
